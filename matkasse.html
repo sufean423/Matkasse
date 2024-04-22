@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkasse Bestilling</title>
+    <link rel="stylesheet" href="styles(matkasse).css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <!-- Bestillingsskjema -->
+            <h2>Bestillingsskjema</h2>
+            <form id="order-form">
+                <!-- Matkassevalg -->
+                <div>
+                    <label for="meal-box">Velg matkasse:</label>
+                    <select id="meal-box">
+                        <option value="Vegansk">Vegansk</option>
+                        <option value="Vegetariansk">Vegetariansk</option>
+                        <option value="Sjømat">Sjømat</option>
+                        <option value="Kjøtt og Fisk">Kjøtt og Fisk</option>
+                        <option value="Familiekasse (barnevennlig)">Familiekasse</option>
+                    </select>
+                </div>
+                <!-- Mengde -->
+                <div>
+                    <label for="quantity">Antall personer:</label>
+                    <select id="quantity">
+                        <option value="1-2">1-2 personer</option>
+                        <option value="3-4">3-4 personer</option>
+                    </select>
+                </div>
+                <!-- Leveringsinformasjon -->
+                <div>
+                    <label for="first-name">Fornavn:</label>
+                    <input type="text" id="first-name" required>
+                </div>
+                <div>
+                    <label for="last-name">Etternavn:</label>
+                    <input type="text" id="last-name" required>
+                </div>
+                <div>
+                    <label for="address">Adresse:</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div>
+                    <label for="postal-code">Postnummer:</label>
+                    <input type="text" id="postal-code" required>
+                </div>
+                <div>
+                    <label for="city">Sted:</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div>
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <!-- Lagre knapp -->
+                <button type="submit">Lagre bestilling</button>
+            </form>
+        </div>
+        <div class="right-column">
+            <!-- Oppsummering og kostnad -->
+            <h2>Din bestilling:</h2>
+            <div id="order-summary"></div>
+            <div id="total-cost"></div>
+        </div>
+    </div>
+    <script src="script(matkasse).js"></script>
+</body>
+</html>
